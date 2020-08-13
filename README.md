@@ -1,0 +1,1 @@
+First project from TOP. be more aware of class/sections and how CSS will affect HTML

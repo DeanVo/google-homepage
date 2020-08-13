@@ -1,0 +1,111 @@
+<html lang="en">
+    <head>
+        <title>Google</title>
+<style>
+    ul {
+        list-style-type:none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    li {
+        float: left;
+    }
+    li a {
+        display: block;
+        text-align: center;
+        padding: 5px 5px;
+        color: gray;
+        text-decoration: none;
+    }
+    li a:hover:not(.active) {
+        color: lightgray;
+    }
+    .google-apps-icon {
+        width: 24px;
+    }
+    .anon-user {
+        width: 24px;
+    }
+    .main-section {
+        position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .google-logo {
+        display: block;
+        margin: auto;
+    }
+    .search-bar-div {
+        border-radius: 25px;
+        padding: 20px;
+        flex-direction: row;
+        border: solid #d9d9d9 1px;
+    }
+    .search-icon {
+        width: 15px;
+        margin-left: 20px;
+    }
+    .mic-icon {
+        width: 15px;
+        margin-right: 20px;
+    }
+    .bottom-nav {
+        position: fixed;
+        display: block;
+        bottom: 0;
+        width: 99.5%;
+        height: 40px;
+        line-height: 40px;
+        background-color: #d9d9d9;
+        border-top: solid #d9d9d9 1px;
+        text-align: center;
+    }
+
+</style>
+</head>
+
+<body>
+<header>
+<ul>
+    <li><a href="https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
+    <li><a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></li>
+    <li style="float:right"><img class="anon-user" src="data:image/jpeg;base64,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" alt="Google user">
+    <li style="float:right"><img class="google-apps-icon" src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_apps_48px-512.png" alt="Google apps icon">
+    <li style="float:right"><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></li>
+    <li style="float:right"><a href="https://mail.google.com/mail/u/0/?tab=wm&ogbl">Gmail</a></li>
+    
+    </ul>
+</header>
+
+<section class="main-section">
+    <img class="google-logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    <form class="search-bar">
+        <div class="search-bar-div">
+            <img class="search-icon" src="https://toppng.com/uploads/preview/free-icons-png-instagram-search-icon-white-11562954322qzcobg6iwo.png" alt="search icon">
+            <input type="text">
+            <img class="mic-icon" src="https://www.pinclipart.com/picdir/middle/32-322562_open-google-microphone-icon-clipart.png" alt="mic icon">
+
+        </div>
+        <div class="button-div">
+            <button class="search-button">Google Search</button>
+            <button class="lucky-button">I'm Feeling Lucky</button>
+        </div>
+    </form>
+</section>
+<footer>
+<div class="bottom-nav">
+    <ul>
+        <li><a href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
+        <li><a href="https://smallbusiness.withgoogle.com/?subid=us-en-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=us-en_US-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u#!/">Business</a></li>
+        <li><a href="https://www.google.com/search/howsearchworks/?fg=1">How Search Works</a></li>
+        <li style="float:right"><a href="">Settings</a>
+        <li style="float:right"><a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a>
+        <li style="float:right"><a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a>
+
+    </ul>
+</div>
+</footer>
